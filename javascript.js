@@ -17,7 +17,7 @@ function getComputerChoice () {
 
 function getHumanChoice() {
     let promptText = prompt('Rock, Paper, or Scissors?');  
-    return promptText;
+    return promptText.toLowerCase();
 };
 
 function playRound (humanChoice, computerChoice) {
@@ -41,7 +41,7 @@ function playRound (humanChoice, computerChoice) {
             computerScore++;
             return winner = "You lose: Scissors beats paper!! Your score: " + humanScore + " Computer's score: " + computerScore;          
         } else {
-            return winner = "No winner! Both chosen: " + humanSelection
+            return winner = "No winner! Both chosen: " + humanSelection;
         }
 };
 
