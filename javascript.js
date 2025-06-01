@@ -1,8 +1,4 @@
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-let humanScore = 0;
-let computerScore = 0;
-
+playGame();
 
 function getComputerChoice () {
     const number = Math.floor(Math.random() * 3);
@@ -20,33 +16,68 @@ function getHumanChoice() {
     return promptText.toLowerCase();
 };
 
-function playRound (humanChoice, computerChoice) {
-        let winner;
-         if (humanChoice === 'rock' && computerChoice === 'scissors') {
-            humanScore++;
-            return winner = "You win: Rock beats Scissors!! Your score: " + humanScore + " Computer's score: " + computerScore;
-         } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-            humanScore++;
-            return winner = "You win: Paper beats Rock!! Your score: " + humanScore + " Computer's score: " + computerScore;
-         } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-            humanScore++;
-            return winner = "You win: Scissors beats Paper!! Your score: " + humanScore + " Computer's score: " + computerScore;
-         } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
-            computerScore++;
-            return winner = "You lose: Rock beats Scissors!! Your score: " + humanScore + " Computer's score: " + computerScore;
-        } else if (humanChoice === 'rock' && computerChoice === 'paper') {
-            computerScore++;
-            return winner = "You lose: Paper beats Rock!! Your score: " + humanScore + " Computer's score: " + computerScore;
-        } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-            computerScore++;
-            return winner = "You lose: Scissors beats paper!! Your score: " + humanScore + " Computer's score: " + computerScore;          
-        } else {
-            return winner = "No winner! Both chosen: " + humanSelection;
-        }
-};
+function playGame() {
+let humanScore = 0;
+let computerScore = 0;
 
-console.log(playRound(humanSelection, computerSelection));
-console.log("You: " + humanSelection + " Computer: " + computerSelection);
+    console.log("First Round:");
+    playRound(getHumanChoice(),getComputerChoice());
+    console.log("Your score: " + humanScore +" Computer: " + computerScore);
+    
+    console.log("Second Round:");
+    playRound(getHumanChoice(),getComputerChoice());
+    console.log("Your score: " + humanScore +" Computer: " + computerScore);
+
+    console.log("Third Round:");
+    playRound(getHumanChoice(),getComputerChoice());
+    console.log("Your score: " + humanScore +" Computer: " + computerScore);
+    
+    console.log("Fourth Round:");
+    playRound(getHumanChoice(),getComputerChoice());
+    console.log("Your score: " + humanScore +" Computer: " + computerScore);
+    
+    console.log("Fifth Round:");
+    playRound(getHumanChoice(),getComputerChoice());
+    console.log("Your score: " + humanScore +" Computer: " + computerScore);
+    
+   
+    
+    if (humanScore > computerScore) {
+        console.log("you win");
+    } else if (computerScore > humanScore) {
+        console.log("you lose")
+    } else {
+        console.log("Draw")
+    };
+        
+        function playRound (humanChoice, computerChoice) {
+                
+                if (humanChoice === 'rock' && computerChoice === 'scissors') {
+                    humanScore = humanScore + 1;
+                    return console.log("rock beats scissors");
+                } else if (humanChoice === 'paper' && computerChoice === 'rock') {
+                    humanScore = humanScore + 1;
+                    return console.log("paper beats rock");
+                } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
+                    humanScore = humanScore + 1;
+                    return console.log("scissors beat paper");
+                    
+                } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
+                    computerScore = computerScore + 1;
+                    return console.log("rock beats scissors");
+                } else if (humanChoice === 'rock' && computerChoice === 'paper') {
+                    computerScore = computerScore + 1;
+                    return console.log("paper beats rock");
+                } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
+                    computerScore = computerScore + 1;
+                    return console.log("scissors beat paper");
+                } else {
+                    return console.log("No winner! Both chosen " + humanChoice);
+                }
+        }
+
+
+}
 
 
 
