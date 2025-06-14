@@ -41,6 +41,8 @@ let computerScore = 0;
     // console.log("Your score: " + humanScore +" Computer: " + computerScore);
     
     console.log("im just curious how this works");
+    console.log("im just curious how this works");
+    console.log("im just curious how this works");
     
     if (humanScore > computerScore) {
         console.log("you win");
