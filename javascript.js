@@ -41,7 +41,7 @@ let computerScore = 0;
     // console.log("Your score: " + humanScore +" Computer: " + computerScore);
     
    
-    
+    let mamasita = "mamasita"
     if (humanScore > computerScore) {
         console.log("you win");
     } else if (computerScore > humanScore) {
