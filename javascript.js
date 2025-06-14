@@ -24,21 +24,21 @@ let computerScore = 0;
     playRound(getHumanChoice(),getComputerChoice());
     console.log("Your score: " + humanScore +" Computer: " + computerScore);
     
-    console.log("Second Round:");
-    playRound(getHumanChoice(),getComputerChoice());
-    console.log("Your score: " + humanScore +" Computer: " + computerScore);
+    // console.log("Second Round:");
+    // playRound(getHumanChoice(),getComputerChoice());
+    // console.log("Your score: " + humanScore +" Computer: " + computerScore);
 
-    console.log("Third Round:");
-    playRound(getHumanChoice(),getComputerChoice());
-    console.log("Your score: " + humanScore +" Computer: " + computerScore);
+    // console.log("Third Round:");
+    // playRound(getHumanChoice(),getComputerChoice());
+    // console.log("Your score: " + humanScore +" Computer: " + computerScore);
     
-    console.log("Fourth Round:");
-    playRound(getHumanChoice(),getComputerChoice());
-    console.log("Your score: " + humanScore +" Computer: " + computerScore);
+    // console.log("Fourth Round:");
+    // playRound(getHumanChoice(),getComputerChoice());
+    // console.log("Your score: " + humanScore +" Computer: " + computerScore);
     
-    console.log("Fifth Round:");
-    playRound(getHumanChoice(),getComputerChoice());
-    console.log("Your score: " + humanScore +" Computer: " + computerScore);
+    // console.log("Fifth Round:");
+    // playRound(getHumanChoice(),getComputerChoice());
+    // console.log("Your score: " + humanScore +" Computer: " + computerScore);
     
    
     
