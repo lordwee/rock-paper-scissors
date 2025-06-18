@@ -18,9 +18,12 @@ let humanChoice = "";
     function winner() {
         if (humanScore === 5) {
             result.textContent = "you win";
-            
+            humanScore = 0;
+            computerScore = 0;
         } else if (computerScore === 5) {
             result.textContent = "you lose";
+            humanScore = 0;
+            computerScore = 0;
         }
     }
 
