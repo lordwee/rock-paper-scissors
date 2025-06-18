@@ -5,14 +5,6 @@ let humanScore = 0;
 let computerScore = 0;
 let humanChoice = "";
 
-    
-    if (humanScore > computerScore) {
-        console.log("you win");
-    } else if (computerScore > humanScore) {
-        console.log("you lose")
-    } else {
-        console.log("Draw")
-    };
         
           
     function winner() {
